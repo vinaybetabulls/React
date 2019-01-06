@@ -12,3 +12,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.sticky-footer{
+  bottom: 0;
+  position: fixed !important;
+  width: 100%;
+  left: 0;
+}
