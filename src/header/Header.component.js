@@ -10,7 +10,12 @@ import {
     UncontrolledDropdown,
     DropdownToggle,
     DropdownMenu,
-    DropdownItem } from 'reactstrap';
+    DropdownItem
+} from 'reactstrap';
+import { Link } from 'react-router-dom';
+
+// import RouterClass from "../routes";
+
 class Header extends React.Component {
 
     constructor(props) {
@@ -26,6 +31,7 @@ class Header extends React.Component {
             isOpen: !this.state.isOpen
         });
     }
+
     render() {
         return (
             <div>
@@ -35,12 +41,12 @@ class Header extends React.Component {
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink href="/components/">Components</NavLink>
+                                <NavLink to='/' activeClassName="active">Home</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                                <NavLink to='/about' activeClassName="active">About</NavLink>
                             </NavItem>
-                            <UncontrolledDropdown nav inNavbar>
+                            {/*<UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
                                     Options
                 </DropdownToggle>
@@ -56,10 +62,11 @@ class Header extends React.Component {
                                         Reset
                   </DropdownItem>
                                 </DropdownMenu>
-                            </UncontrolledDropdown>
+                            </UncontrolledDropdown> */}
                         </Nav>
                     </Collapse>
                 </Navbar>
+                {/* <RouterClass /> */}
             </div>
 
 
